@@ -16,7 +16,6 @@ description = "Homepage Layout"
     <!-- Website title -->
     <title>{{ this.theme.website_name }} - {{ this.page.meta_title | default(this.page.title) }}</title>
 
-
     {% if this.theme.load_google_fonts %}
     <link href="https://fonts.googleapis.com/css?family={{ this.theme.google_font_family }}" rel="stylesheet">
     {% endif %}
@@ -27,8 +26,28 @@ description = "Homepage Layout"
 
     <!-- Default stylesheet -->
     <link href="{{ ['assets/css/default.css']|theme }}" rel="stylesheet">
+
+    {% styles %}
+
+    {% if this.theme.custom_css %}
+    <style>
+        {{ this.theme.custom_css }}
+    </style>
+    {% endif %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{ this.theme.jQuery_version }}/jquery.min.js"></script>
 </head>
 <body>
 {% page %}
+
+<script src="{{ ['assets/js/scripts.js']|theme }}"></script>
+
+{% scripts %}
+
+{% if this.theme.custom_js %}
+<script>
+    {{ this.theme.custom_js }}
+</script>
+{% endif %}
 </body>
 </html>

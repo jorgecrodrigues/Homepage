@@ -83,25 +83,13 @@ tabs:
 
     load_fontawesome:
       tab: Assets
-      label: FontAwesome Icons Font
-      type: switch
-      default: true
-
-    load_material_icons:
-      tab: Assets
-      label: Material Icons Font
-      type: switch
-      default: true
-
-    load_stroke7_icons:
-      tab: Assets
-      label: Stroke 7 Icons Font
+      label: Font Awesome Icons (CDN)
       type: switch
       default: true
 
     load_jQuery:
       tab: Assets
-      label: jQuery
+      label: jQuery (CDN)
       type: switch
       default: true
 
@@ -111,19 +99,13 @@ tabs:
       type: dropdown
       default: 2.2.4
       options:
-        3.1.0: 3.1.0
+        3.3.1: 3.3.1
         2.2.4: 2.2.4
         1.12.4: 1.12.4
       trigger:
         action: show
         field: load_jQuery
         condition: checked
-
-    load_octobercms_framework:
-      tab: Assets
-      label: OctoberCMS Front-end Javascript Framework
-      type: switch
-      default: false
 
     ####################################################
     # Tab: Styles
