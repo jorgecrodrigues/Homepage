@@ -137,12 +137,6 @@ tabs:
       type: switch
       default: true
 
-    load_wow_js:
-      tab: Addons
-      label: WOW JS
-      type: switch
-      default: true
-
     load_owl_carousel:
       tab: Addons
       label: Owl Carousel

@@ -24,6 +24,8 @@ description = "Homepage Layout"
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     {% endif %}
 
+    {% partial "_addons/css" %}
+
     <!-- Default stylesheet -->
     <link href="{{ ['assets/css/default.css']|theme }}" rel="stylesheet">
 
@@ -35,11 +37,15 @@ description = "Homepage Layout"
     </style>
     {% endif %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{ this.theme.jQuery_version }}/jquery.min.js"></script>
+    <!-- Cloudflare CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{ this.theme.jQuery_version }}/jquery.min.js"></script>
 </head>
 <body>
 {% page %}
 
+{% partial "_addons/js" %}
+
+<!-- Default scripts -->
 <script src="{{ ['assets/js/scripts.js']|theme }}"></script>
 
 {% scripts %}
