@@ -12,48 +12,32 @@ description = "Homepage Layout"
     <meta name="keywords" content="{{ this.theme.keywords }}">
     <meta name="author" content="{{ this.theme.website_author }}">
     <meta name="reply-to" content="{{this.theme.website_author_email}}">
-
     <!-- Website title -->
     <title>{{ this.theme.website_name }} - {{ this.page.meta_title | default(this.page.title) }}</title>
-
     {% if this.theme.load_google_fonts %}
-    <link href="https://fonts.googleapis.com/css?family={{ this.theme.google_font_family }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family={{ this.theme.google_font_family }}" rel="stylesheet">
     {% endif %}
-
     {% if this.theme.load_fontawesome %}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     {% endif %}
-
     {% partial "_addons/css" %}
-
     <!-- Default stylesheet -->
     <link href="{{ ['assets/css/default.css']|theme }}" rel="stylesheet">
-
     {% styles %}
-
     {% if this.theme.custom_css %}
-    <style>
-        {{ this.theme.custom_css }}
-    </style>
+        <style type="text/css">{{ this.theme.custom_css }}</style>
     {% endif %}
-
     <!-- Cloudflare CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{ this.theme.jQuery_version }}/jquery.min.js"></script>
 </head>
 <body>
 {% page %}
-
 {% partial "_addons/js" %}
-
 <!-- Default scripts -->
 <script src="{{ ['assets/js/scripts.js']|theme }}"></script>
-
 {% scripts %}
-
 {% if this.theme.custom_js %}
-<script>
-    {{ this.theme.custom_js }}
-</script>
+    <script type="text/javascript" charset="utf-8">{{ this.theme.custom_js }}</script>
 {% endif %}
 </body>
 </html>
