@@ -1,18 +1,26 @@
+title = "Home page"
 description = "Homepage Layout"
 ==
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{this.page.website_lang | default(this.theme.website_lang )}}">
 <head>
+    <!-- Meta tag's -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ this.page.meta_description | default(this.theme.description) }}">
     <meta name="keywords" content="{{ this.theme.keywords }}">
     <meta name="author" content="{{ this.theme.website_author }}">
+    <meta name="reply-to" content="{{this.theme.website_author_email}}">
+
+    <!-- Website title -->
     <title>{{ this.theme.website_name }} - {{ this.page.meta_title | default(this.page.title) }}</title>
+
+
     {% if this.theme.load_google_fonts %}
     <link href="https://fonts.googleapis.com/css?family={{ this.theme.google_font_family }}" rel="stylesheet">
     {% endif %}
+
     {% if this.theme.load_fontawesome %}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     {% endif %}

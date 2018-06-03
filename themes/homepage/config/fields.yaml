@@ -5,6 +5,13 @@ tabs:
     # Tab: Info
     ####################################################
 
+    website_lang:
+      tab: Info
+      label: Website Lang
+      type: text
+      comment: en, pt, pt-br, en-us
+      default: en
+
     website_name:
       tab: Info
       label: Website Name
