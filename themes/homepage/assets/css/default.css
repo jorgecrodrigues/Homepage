@@ -1,0 +1,179 @@
+/**********************************************************
+** Author: Jorge Rodrigues <jorgerodrigues9@outlook.com> **
+** Created at: 03/06/2018                                **
+***********************************************************/
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/*CONTENT POSITION*/
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+/* To Bootstrap */
+
+.box > .row {
+    width: 100%;
+    display: table-row;
+}
+
+.box > .row > div {
+    height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/* End to Bootstrap */
+
+.box .top {
+    width: 100%;
+    display: table-row;
+}
+
+.box .top .content {
+    width: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.box .middle {
+    width: 100%;
+    display: table-row;
+}
+
+.box .middle .content {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.box .middle .content.half {
+    width: 50%;
+}
+
+.box .bottom {
+    width: 100%;
+    display: table-row;
+}
+
+.box .bottom .content {
+    width: 100%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/* NAVIGATION */
+.nav {
+    margin: 0;
+    padding: 0 0 20px 0;
+    box-shadow: 0 4px 1px 0 rgba(30, 59, 91, 0.1);
+    display: block;
+}
+
+.nav .default {
+    margin: 25px auto 0 auto;
+    width: 90%;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav .default:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.nav .default .left-links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    position: relative;
+}
+
+.nav .default .left-links > li > .link {
+    font-size: 20px;
+}
+
+.nav .default .right-links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+.nav .default .right-links > li {
+    display: inline-block;
+}
+
+.nav .default .right-links > li > .link {
+    margin: 1px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+
+/* Links Design */
+.links {
+    margin: 40px 0;
+    padding: 0;
+    display: block;
+    list-style-type: none;
+}
+
+.links > .each {
+    display: inline-block;
+}
+
+.links > .each > .link {
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #111111;
+    display: block;
+    transition: color 0.4s ease-in-out;
+    position: relative;
+}
+
+.links > .each > .link:hover {
+    color: #41a085;
+}
+
+.links > .each > .link:before {
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 50%;
+    background-color: #92e6ce;
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    transition: width 0.4s ease-in-out;
+}
+
+.links > .each > .link:hover:before {
+    width: 100%;
+}

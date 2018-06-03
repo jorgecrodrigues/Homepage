@@ -1,5 +1,6 @@
-name: Homepage
-description: 'Pagina inicial do blog'
-author: 'Jorge Rodrigues'
-homepage: 'http://unscode.com'
-code: ''
+name: "Homepage"
+description: "Free Modern and Clean OctoberCMS Theme"
+author: "Jorge Rodrigues"
+homepage: "http://unscode.com"
+code: unscode-com
+form: config/fields.yaml
