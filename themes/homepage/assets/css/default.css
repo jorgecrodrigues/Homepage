@@ -17,7 +17,7 @@ body {
 }
 
 body {
-
+    font-family: 'Lato', sans-serif;
 }
 
 body.loaded {
@@ -47,55 +47,56 @@ body.loaded {
 
 /* End to Bootstrap */
 
-.box .top {
+.box > .top {
     width: 100%;
     display: table-row;
 }
 
-.box .top .content {
+.box > .top > .content {
     width: 100%;
     vertical-align: middle;
     display: table-cell;
 }
 
-.box .middle {
+.box > .middle {
     width: 100%;
     display: table-row;
 }
 
-.box .middle .content {
+.box > .middle > .content {
     width: 100%;
     height: 100%;
     vertical-align: middle;
     display: table-cell;
 }
 
-.box .middle .content.half {
-    width: 50%;
-}
-
-.box .bottom {
+.box > .bottom {
     width: 100%;
     display: table-row;
 }
 
-.box .bottom .content {
+.box > .bottom > .content {
     width: 100%;
     vertical-align: middle;
     display: table-cell;
+}
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+    position: relative;
 }
 
 /* NAVIGATION */
 .nav {
     margin: 0;
     padding: 0 0 20px 0;
-    box-shadow: 0 4px 1px 0 rgba(30, 59, 91, 0.1);
     display: block;
 }
 
 .nav .default {
     margin: 25px auto 0 auto;
-    width: 90%;
+    width: 100%;
     font-weight: 700;
     position: relative;
 }
@@ -114,6 +115,11 @@ body.loaded {
     position: relative;
 }
 
+.nav .default .left-links .brand {
+    font-size: 30px;
+    text-decoration: none;
+}
+
 .nav .default .left-links > li > .link {
     font-size: 20px;
 }
@@ -130,10 +136,17 @@ body.loaded {
 }
 
 .nav .default .right-links > li > .link {
-    margin: 1px 15px;
+    margin: 0 15px;
+    padding: 9px 10px 5px 10px;
+    border-radius: 3px;
     text-decoration: none;
     font-size: 20px;
     display: block;
+}
+
+.nav .default .right-links > li > .contact {
+    margin-left: 150px;
+    color: white;
 }
 
 /* Links Design */
@@ -176,4 +189,317 @@ body.loaded {
 
 .links > .each > .link:hover:before {
     width: 100%;
+}
+
+/* 1 - Home */
+
+.featured {
+    background-position: center;
+    background-size: 110%;
+    position: relative;
+}
+
+.featured .top,
+.featured .middle,
+.featured .bottom {
+    background: linear-gradient(to right, rgba(0, 0, 0, .99), rgba(0, 0, 0, .10));
+}
+
+.featured .vertical {
+    top: 50%;
+    right: 0;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+.featured .texts {
+    width: 40%;
+}
+
+.featured .texts .title {
+    margin: 5px 0;
+    line-height: 1.3;
+    font-size: 80px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.featured .texts .description {
+    margin: 5px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.featured .socials {
+    text-align: right;
+}
+
+.featured .socials .social {
+    margin: 10px 0 50px 0;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.featured .socials .social .icon {
+    margin: 0 5px;
+    padding: 10px 12px;
+    border-radius: 100%;
+    color: white;
+    display: block;
+}
+
+.look {
+    margin-top: -65px;
+    padding: 0 25px 20px 25px;
+    background-color: white;
+    /*background-color: rgba(0, 0, 0, .60);*/
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    display: inline-block;
+}
+
+.look .what {
+    margin-top: 20px;
+}
+
+/*BACKGROUND, BORDER AND TEXT COLORS*/
+.bg-red {
+    background-color: #E53935
+}
+
+.bg-pink {
+    background-color: #D81B60
+}
+
+.bg-purple {
+    background-color: #8E24AA
+}
+
+.bg-deep-purple {
+    background-color: #5E35B1
+}
+
+.bg-indigo {
+    background-color: #3949AB
+}
+
+.bg-blue {
+    background-color: #1E88E5
+}
+
+.bg-light-blue {
+    background-color: #0288D1
+}
+
+.bg-cyan {
+    background-color: #00ACC1
+}
+
+.bg-teal {
+    background-color: #00897B
+}
+
+.bg-green {
+    background-color: #43A047
+}
+
+.bg-light-green {
+    background-color: #7CB342
+}
+
+.bg-lime {
+    background-color: #C0CA33
+}
+
+.bg-yellow {
+    background-color: #FDD835
+}
+
+.bg-amber {
+    background-color: #FFB300
+}
+
+.bg-orange {
+    background-color: #FB8C00
+}
+
+.bg-deep-orange {
+    background-color: #F4511E
+}
+
+.bg-brown {
+    color: #6D4C41
+}
+
+.bg-gray {
+    background-color: #757575
+}
+
+.bg-black {
+    background-color: #000000
+}
+
+.bg-white {
+    background-color: #ffffff
+}
+
+.bd-red {
+    border-color: #E53935
+}
+
+.bd-pink {
+    border-color: #D81B60
+}
+
+.bd-purple {
+    border-color: #8E24AA
+}
+
+.bd-deep-purple {
+    border-color: #5E35B1
+}
+
+.bd-indigo {
+    border-color: #3949AB
+}
+
+.bd-blue {
+    border-color: #1E88E5
+}
+
+.bd-light-blue {
+    border-color: #0288D1
+}
+
+.bd-cyan {
+    border-color: #00ACC1
+}
+
+.bd-teal {
+    border-color: #00897B
+}
+
+.bd-green {
+    border-color: #43A047
+}
+
+.bd-light-green {
+    border-color: #7CB342
+}
+
+.bd-lime {
+    border-color: #C0CA33
+}
+
+.bd-yellow {
+    border-color: #FDD835
+}
+
+.bd-amber {
+    border-color: #FFB300
+}
+
+.bd-orange {
+    border-color: #FB8C00
+}
+
+.bd-deep-orange {
+    border-color: #F4511E
+}
+
+.bd-brown {
+    border-color: #6D4C41
+}
+
+.bd-gray {
+    border-color: #757575
+}
+
+.bd-black {
+    border-color: #000000
+}
+
+.bd-white {
+    border-color: #ffffff
+}
+
+.text-red {
+    color: #E53935
+}
+
+.text-pink {
+    color: #D81B60
+}
+
+.text-purple {
+    color: #8E24AA
+}
+
+.text-deep-purple {
+    color: #5E35B1
+}
+
+.text-indigo {
+    color: #3949AB
+}
+
+.text-blue {
+    color: #1E88E5
+}
+
+.text-light-blue {
+    color: #0288D1
+}
+
+.text-cyan {
+    color: #00ACC1
+}
+
+.text-teal {
+    color: #00897B
+}
+
+.text-green {
+    color: #43A047
+}
+
+.text-light-green {
+    color: #7CB342
+}
+
+.text-lime {
+    color: #C0CA33
+}
+
+.text-yellow {
+    color: #FDD835
+}
+
+.text-amber {
+    color: #FFB300
+}
+
+.text-orange {
+    color: #FB8C00
+}
+
+.text-deep-orange {
+    color: #F4511E
+}
+
+.text-brown {
+    color: #6D4C41
+}
+
+.text-gray {
+    color: #757575
+}
+
+.text-black {
+    color: #000000
+}
+
+.text-white {
+    color: #ffffff
 }
