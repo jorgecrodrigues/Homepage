@@ -20,7 +20,65 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-body.loaded {
+/* Loading animation */
+.behind {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    display: table;
+}
+
+.behind .center {
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.behind .center .spinner {
+    width: 100px;
+    height: 100px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: silver;
+    border-left-color: black;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+.loaded .behind {
+    display: none;
+}
+
+/* BODY */
+.body {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.loaded .body {
     opacity: 1;
 }
 
@@ -261,6 +319,49 @@ body.loaded {
 
 .look .what {
     margin-top: 20px;
+}
+
+/* Alls pages - Footer */
+.footer {
+    margin-top: 100px;
+    padding: 50px 0;
+    border-top: 1px solid #eeeeee;
+}
+
+.footer:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.footer .left,
+.footer .middle,
+.footer .right {
+    padding: 8px 0;
+    float: left;
+}
+
+.footer .left,
+.footer .right {
+    width: 25%;
+}
+
+.footer .left {
+
+}
+
+.footer .middle {
+    width: 50%;
+    text-align: center;
+}
+
+.footer .right {
+    text-align: right;
+}
+
+.footer .right .social .fa {
+    margin: 0 5px;
+    color: black;
 }
 
 /*BACKGROUND, BORDER AND TEXT COLORS*/

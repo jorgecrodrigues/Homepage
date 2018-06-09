@@ -31,7 +31,14 @@ description = "Homepage Layout"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/{{ this.theme.jQuery_version }}/jquery.min.js"></script>
 </head>
 <body>
-{% page %}
+<div class="behind">
+    <div class="center">
+        <div class="spinner"></div>
+    </div>
+</div>
+<div id="body" class="body">
+    {% page %}
+</div>
 {% partial "_addons/js" %}
 <!-- Default scripts -->
 <script src="{{ ['assets/js/scripts.js']|theme }}"></script>
